@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/ico" href="./favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Three in a row</title>
+</head>
+<body>
+<main class="content-container">
+    <section class="stats">
+        <p class="stats__score">Score: <span>0</span></p>
+        <p class="stats__highscore">Highscore: <span>0</span></p>
+    </section>
+    <div class="game-container">
+        <section class="game-window"></section>
+        <section class="control-panel">
+            <button class="control-panel__new-game">New game</button>
+            <button class="control-panel__sound">Mute</button>
+            <button class="control-panel__color-theme">Light theme</button>
+        </section>
+        <button class="show-controls"></button>
+    </div>
+    <div class="overlay"></div>
+</main>
+<script type="module" src="js/index.js"></script>
+</body>
+</html>

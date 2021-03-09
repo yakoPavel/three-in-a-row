@@ -1,0 +1,37 @@
+body {
+  font-family: var(--font);
+  font-size: 2rem;
+  color: var(--color-secondary);
+
+  @media only screen and (max-width: $bp-medium),
+  only screen and (max-height: $bp-medium) {
+    font-size: 1.6rem;
+  }
+
+  @media only screen and (max-width: $bp-small),
+  only screen and (max-height: $bp-small) {
+    font-size: 1.4rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest),
+  only screen and (max-height: $bp-smallest) {
+    font-size: 1.2rem;
+  }
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: var(--color-secondary) 3px solid;
+  padding: .5rem;
+  //width: 80%;
+  line-height: 1.4;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+  }
+}

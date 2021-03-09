@@ -1,0 +1,156 @@
+body {
+  min-height: 100vh;
+  background: var(--color-primary-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-container {
+  width: 100vmin;
+  min-width: 35rem;
+  max-width: var(--content-width);
+  height: 100vmin;
+  min-height: 35rem;
+  max-height: var(--content-width);
+  background-color: var(--color-primary);
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// Game statistics
+.stats {
+  width: 100%;
+  display: flex;
+  padding: 3rem;
+  justify-content: space-around;
+}
+
+// Main content
+.game-container {
+  width: 100%;
+  height: 100%;
+  padding: 0 3rem 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media only screen and (max-width: $bp-smallest),
+  only screen and (max-height: $bp-smallest) {
+    padding: 0 1.5rem 1.5rem;
+  }
+}
+
+.game-window {
+  box-sizing: content-box;
+  width: 80%;
+  height: 100%;
+  padding: .5rem;
+  flex: 8 1;
+
+  border: var(--color-secondary) .5rem solid;
+
+  display: grid;
+  grid-gap: .5rem;
+}
+
+.control-panel {
+  margin-top: 2rem;
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+  align-items: stretch;
+  z-index: 2;
+
+  & > * {
+    flex: 1;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: $bp-small),
+  only screen and (max-height: $bp-small) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    & > * {
+      flex: 0;
+      margin: 0;
+
+      &:not(:first-child) {
+        margin-top: 2rem;
+      }
+    }
+
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.show-controls {
+  display: none;
+  margin-top: 1rem;
+  width: 80%;
+  background-image: linear-gradient(75deg, var(--color-primary), var(--color-primary-1));
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+
+  @media only screen and (max-width: $bp-small),
+  only screen and (max-height: $bp-small) {
+    display: block;
+  }
+}
+
+// Overlay
+@media only screen and (max-width: $bp-small),
+only screen and (max-height: $bp-small) {
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(34, 34, 34, .9);
+    display: none;
+  }
+}
+
+// Cells
+.cell-style-0 {
+  background-color: var(--color-primary);
+}
+
+.cell-style-1 {
+  background-color: red;
+}
+
+.cell-style-2 {
+  background-color: green;
+}
+
+.cell-style-3 {
+  background-color: greenyellow;
+}
+
+.cell-style-4 {
+  background-color: rosybrown;
+}
+
+.cell-scale-down {
+  transform: scale(0);
+  transition: transform .5s;
+}
+
+
+
